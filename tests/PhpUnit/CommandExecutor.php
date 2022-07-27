@@ -13,9 +13,9 @@ use Symfony\Component\Console\{
 };
 
 /**
- * Class DatabaseConfig
+ * Symfony commands executor.
  */
-class DatabaseConfig
+class CommandExecutor
 {
     private Application $application;
     private ConsoleOutput $output;
@@ -95,6 +95,23 @@ class DatabaseConfig
         $this->output->write('Load fixtures...');
         $input = new ArrayInput([
             'command' => 'doctrine:fixtures:load',
+            '--no-interaction' => true,
+            '--env' => 'test',
+        ]);
+
+        $this->run($input);
+    }
+
+    /**
+     * Runs Publisher command.
+     *
+     * @return void
+     */
+    public function runPublisher(): void
+    {
+        $this->output->write('Publishing capsules...');
+        $input = new ArrayInput([
+            'command' => 'app:publish-capsules',
             '--no-interaction' => true,
             '--env' => 'test',
         ]);

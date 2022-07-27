@@ -21,10 +21,15 @@ framework:
         api_post:
             policy: 'fixed_window'
             limit: 5
-            interval: '1 minutes'
+            interval: '1 minute'
 
 when@test:
     framework:
         test: true
         session:
             storage_factory_id: session.storage.factory.mock_file
+        rate_limiter:
+            api_post:
+                policy: 'fixed_window'
+                limit: 900
+                interval: '1 minute'

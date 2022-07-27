@@ -1,0 +1,7 @@
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                driver: '%env(resolve:DATABASE_DRIVER)%'
+                path: '%env(resolve:DATABASE_PATH)%'

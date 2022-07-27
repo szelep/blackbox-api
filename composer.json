@@ -1,6 +1,6 @@
 {
-    "name": "szelep/base-api-platform",
-    "description": "Base API Platform application with configured users system and auth handled by JWT.",
+    "name": "szelep/blackbox-api",
+    "description": "Main API repository for blackbox.info application based on Symfony&API Platform. ",
     "type": "project",
     "license": "WTFPL",
     "minimum-stability": "stable",

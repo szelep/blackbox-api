@@ -18,8 +18,8 @@
     </php>
 
     <extensions>
-        <extension class="DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension"/>
         <extension class="App\Tests\PhpUnit\Runner\BypassFinalsHook"/>
+        <extension class="DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension"/>
     </extensions>
 
     <testsuites>

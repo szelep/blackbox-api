@@ -12,9 +12,6 @@ use DG\BypassFinals;
  */
 final class BypassFinalsHook implements BeforeTestHook
 {
-    /**
-     * {@inheritDoc}
-     */
     public function executeBeforeTest(string $test): void
     {
         BypassFinals::enable();

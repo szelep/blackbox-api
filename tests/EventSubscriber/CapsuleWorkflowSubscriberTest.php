@@ -9,6 +9,7 @@ use App\EventSubscriber\CapsuleWorkflowSubscriber;
 use DateTimeImmutable;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Workflow\Event\CompletedEvent;
+use Symfony\Component\Workflow\Marking;
 
 /**
  * Class CapsuleWorkflowSubscriberTest
@@ -22,15 +23,17 @@ class CapsuleWorkflowSubscriberTest extends TestCase
     {
         $subscriber = new CapsuleWorkflowSubscriber();
         $capsuleMock = $this->createMock(Capsule::class);
-        $eventMock = $this->createMock(CompletedEvent::class);
-        $eventMock->method('getSubject')->willReturn($capsuleMock);
 
         $capsuleMock
             ->expects($this->once())
             ->method('setPublishAt')
-            ->with(new DateTimeImmutable('2500-01-01'));
+            ->with(new DateTimeImmutable('2500-01-01'))
+        ;
 
 
-        $subscriber->onUnpublish($eventMock);
+        $subscriber->onUnpublish(new CompletedEvent(
+            $capsuleMock,
+            $this->createMock(Marking::class)
+        ));
     }
 }

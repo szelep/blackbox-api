@@ -51,4 +51,4 @@ jobs:
             -   name: Install dependencies
                 run: composer install --prefer-dist --no-progress
             -   name: "Run PHPUnit"
-                run: ./vendor/phpunit/phpunit/phpunit ./tests --bootstrap=./tests/bootstrap.php --testdox
+                run: ./vendor/phpunit/phpunit/phpunit ./tests --bootstrap=./tests/bootstrap.php --configuration ./phpunit.xml.dist --testdox

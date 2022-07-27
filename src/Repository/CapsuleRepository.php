@@ -15,7 +15,9 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Capsule|null find($id, $lockMode = null, $lockVersion = null)
  * @method Capsule|null findOneBy(array $criteria, array $orderBy = null)
  * @method Capsule[]    findAll()
- * @method Capsule[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Capsule[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null
+ *
+ * @SuppressWarnings(PHPMD.MemberPrimaryPrefix)
  */
 class CapsuleRepository extends ServiceEntityRepository
 {

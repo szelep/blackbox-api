@@ -13,6 +13,8 @@ use Symfony\Component\Serializer\Normalizer\{
 
 /**
  * Normalized that will erase Capsule::$content from payload if the capsule has not yet been published.
+ *
+ * @SuppressWarnings(PHPMD.ReturnStatement)
  */
 class CapsuleNormalizer implements NormalizerInterface, NormalizerAwareInterface
 {

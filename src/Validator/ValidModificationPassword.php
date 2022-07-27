@@ -9,6 +9,8 @@ use Symfony\Component\Validator\Constraint;
 
 /**
  * Constraint that compares provided modification password provided by user and hashed from Capsule.
+ *
+ * @SuppressWarnings(PHPMD.PublicFieldDeclaration)
  */
 #[Attribute(Attribute::TARGET_PROPERTY)]
 class ValidModificationPassword extends Constraint

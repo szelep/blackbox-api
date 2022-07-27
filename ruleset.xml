@@ -71,7 +71,7 @@
                 <value>3</value>
             </property>
             <property name="exceptions">
-                <value>i,id,ip,key,now,day,dom,sql,em,to</value>
+                <value>i,id,ip,key,now,day,dom,sql,em,to,io</value>
             </property>
         </properties>
     </rule>

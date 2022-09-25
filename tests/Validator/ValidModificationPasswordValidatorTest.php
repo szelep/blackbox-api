@@ -4,11 +4,8 @@ declare(strict_types=1);
 
 namespace App\Tests\Validator;
 
-use App\Entity\Capsule;
-use App\Validator\{
-    ValidModificationPassword,
-    ValidModificationPasswordValidator
-};
+use App\Domain\Entity\Capsule;
+use App\Validator\{ValidModificationPassword, ValidModificationPasswordValidator};
 use PHPUnit\Framework\MockObject\MockObject;
 use stdClass;
 use Symfony\Component\PasswordHasher\PasswordHasherInterface;

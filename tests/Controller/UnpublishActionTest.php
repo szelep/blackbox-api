@@ -6,7 +6,7 @@ namespace App\Tests\Controller;
 
 use ApiPlatform\Core\Validator\ValidatorInterface;
 use App\Controller\UnpublishAction;
-use App\Entity\Capsule;
+use App\Domain\Entity\Capsule;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Workflow\Exception\TransitionException;
 use Symfony\Component\Workflow\WorkflowInterface;

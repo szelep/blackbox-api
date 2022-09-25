@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Fixtures;
 
-use App\Entity\Capsule;
+use App\Domain\Entity\Capsule;
 use DateTimeImmutable;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\ORM\Id\AssignedGenerator;

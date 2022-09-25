@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Tests\EventSubscriber;
 
-use App\Entity\Capsule;
+use App\Domain\Entity\Capsule;
 use App\EventSubscriber\CapsuleWorkflowSubscriber;
 use DateTimeImmutable;
 use PHPUnit\Framework\TestCase;

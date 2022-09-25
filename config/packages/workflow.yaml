@@ -3,18 +3,18 @@ framework:
         capsule:
             type: 'state_machine'
             supports:
-                - App\Entity\Capsule
+                - App\Capsule\Domain\Entity\Capsule
             marking_store:
                 type: method
                 property: status
             initial_marking: queued
             places:
-                - !php/const App\Entity\Capsule::STATUS_QUEUED
-                - !php/const App\Entity\Capsule::STATUS_PUBLISHED
+                - !php/const App\Capsule\Domain\Entity\Capsule::STATUS_QUEUED
+                - !php/const App\Capsule\Domain\Entity\Capsule::STATUS_PUBLISHED
             transitions:
                 publish:
-                    from: !php/const App\Entity\Capsule::STATUS_QUEUED
-                    to: !php/const App\Entity\Capsule::STATUS_PUBLISHED
+                    from: !php/const App\Capsule\Domain\Entity\Capsule::STATUS_QUEUED
+                    to: !php/const App\Capsule\Domain\Entity\Capsule::STATUS_PUBLISHED
                 unpublish:
-                    from: !php/const App\Entity\Capsule::STATUS_PUBLISHED
-                    to: !php/const App\Entity\Capsule::STATUS_QUEUED
+                    from: !php/const App\Capsule\Domain\Entity\Capsule::STATUS_PUBLISHED
+                    to: !php/const App\Capsule\Domain\Entity\Capsule::STATUS_QUEUED

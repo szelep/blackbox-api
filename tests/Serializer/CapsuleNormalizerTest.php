@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Tests\Serializer;
 
-use App\Entity\Capsule;
+use App\Domain\Entity\Capsule;
 use App\Serializer\CapsuleNormalizer;
 use PHPUnit\Framework\TestCase;
 use stdClass;

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Tests\DataPersister;
 
 use App\DataPersister\CapsulePersister;
-use App\Entity\Capsule;
+use App\Domain\Entity\Capsule;
 use PHPUnit\Framework\TestCase;
 use stdClass;
 use Symfony\Component\PasswordHasher\PasswordHasherInterface;
